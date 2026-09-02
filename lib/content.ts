@@ -14,7 +14,7 @@ export const BUILDERS_SHORT = "Arista, Deco & Opus Homes";
 export const STATUS = "Coming Soon";
 export const STATUS_BADGE = "Coming Soon — VIP Registration Open";
 /** Hardcoded insert value for bridgelands_leads.site_source. Never accept from the client. */
-export const SITE_SOURCE = "detached" as const;
+export const SITE_SOURCE = SITE_URL;
 export const LAST_UPDATED = "August 29, 2026";
 export const LAST_UPDATED_ISO = "2026-08-29";
 export const WORDMARK = "Bridgelands Detached";

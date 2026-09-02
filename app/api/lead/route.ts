@@ -1,12 +1,12 @@
 import { NextResponse } from "next/server";
-import { SITE_SOURCE } from "@/lib/content";
+import { SITE_URL } from "@/lib/content";
 import { getSupabaseAnon, LEADS_TABLE } from "@/lib/supabase";
 import { leadFormSchema, MIN_SUBMIT_MS, normalizePhone } from "@/lib/validation";
 
 export const dynamic = "force-dynamic";
 
-/** Hardcoded. Never accept site_source from the client. */
-const THIS_SITE_SOURCE = SITE_SOURCE;
+/** Hardcoded to this site. Never accept site_source from the client. */
+const THIS_SITE_SOURCE = SITE_URL;
 
 function withoutClientSource(body: unknown): unknown {
   if (!body || typeof body !== "object" || Array.isArray(body)) return body;
