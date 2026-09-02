@@ -2,6 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   trailingSlash: false,
+  skipTrailingSlashRedirect: true,
   poweredByHeader: false,
   images: {
     formats: ["image/avif", "image/webp"],
@@ -17,13 +18,6 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/sitemap.xml",
-        headers: [
-          { key: "Content-Type", value: "application/xml; charset=utf-8" },
-          { key: "Cache-Control", value: "public, max-age=3600, must-revalidate" },
-        ],
-      },
-      {
-        source: "/sitemap/sitemap.xml",
         headers: [
           { key: "Content-Type", value: "application/xml; charset=utf-8" },
           { key: "Cache-Control", value: "public, max-age=3600, must-revalidate" },
