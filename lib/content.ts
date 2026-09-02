@@ -133,7 +133,6 @@ export const NAV = [
   { href: "/faq", label: "FAQ" },
 ] as const;
 
-/** Keep `public/sitemap.xml` and `public/sitemap/sitemap.xml` in sync. */
 export const SITEMAP_ROUTES: {
   path: string;
   changeFrequency: "weekly" | "monthly";
